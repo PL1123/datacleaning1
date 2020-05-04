@@ -6,7 +6,7 @@ output: html_document
 ```{r setup, include=FALSE}
 knitr::opts_chunk$set(echo = TRUE)
 ```
-Overview.
+- Overview
 
 The experiments have been carried out with a group of 30 volunteers within an age bracket of 19-48 years. Each person performed six activities (WALKING, WALKING_UPSTAIRS, WALKING_DOWNSTAIRS, SITTING, STANDING, LAYING) wearing a smartphone (Samsung Galaxy S II) on the waist. Using its embedded accelerometer and gyroscope, we captured 3-axial linear acceleration and 3-axial angular velocity at a constant rate of 50Hz. The experiments have been video-recorded to label the data manually. The obtained dataset has been randomly partitioned into two sets, where 70% of the volunteers was selected for generating the training data and 30% the test data. 
 
@@ -50,7 +50,8 @@ The following files are available for the train and test data. Their description
 
 - 'train/Inertial Signals/body_gyro_x_train.txt': The angular velocity vector measured by the gyroscope for each window sample. The units are radians/second. 
 
-STEPS are as followed: 
+STEPS of transformation are as followed: 
+======
 1. Merges the training and the test sets to create one data set.
 Merge by rbind and cbind to create testing sets and training sets and combine them together. 
 
@@ -66,6 +67,19 @@ Label appropriate names using gsub.
 5. Creates a second, independent tidy data set with the average of each variable for each activity and each subject.
 Aggregate and produce the final tidy dataset. 
 
+Identifiers
+======
+1. subj - Subjects' ID
+
+2. act - Type of Acitvies
+
+Measurements' names changed
+======
+1. Acc --> Accelerometer
+2. t --> time
+3. f --> frequency
+4. mag --> magnitude
+5. bodybody -->body
 
 Notes: 
 ======
